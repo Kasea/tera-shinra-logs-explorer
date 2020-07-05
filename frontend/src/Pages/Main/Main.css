@@ -1,0 +1,11 @@
+.mainRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainRoot > div {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+}

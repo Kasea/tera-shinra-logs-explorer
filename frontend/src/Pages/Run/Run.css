@@ -1,0 +1,15 @@
+.displayRunData {
+  margin-left: 38px;
+}
+
+.displayRunStats {
+  margin: 4px;
+}
+
+.displayRunDataButtons > button {
+  margin: 0 8px;
+}
+
+.inputContainer > input {
+  margin: 0 4px;
+}

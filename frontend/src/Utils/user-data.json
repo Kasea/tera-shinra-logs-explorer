@@ -1,0 +1,596 @@
+{
+    "10101": {
+        "class": "Warrior",
+        "gender": "male",
+        "name": "Warrior",
+        "race": "human"
+    },
+    "10102": {
+        "class": "Lancer",
+        "gender": "male",
+        "name": "Lancer",
+        "race": "human"
+    },
+    "10103": {
+        "class": "Slayer",
+        "gender": "male",
+        "name": "Slayer",
+        "race": "human"
+    },
+    "10104": {
+        "class": "Berserker",
+        "gender": "male",
+        "name": "Berserker",
+        "race": "human"
+    },
+    "10105": {
+        "class": "Sorcerer",
+        "gender": "male",
+        "name": "Sorcerer",
+        "race": "human"
+    },
+    "10106": {
+        "class": "Archer",
+        "gender": "male",
+        "name": "Archer",
+        "race": "human"
+    },
+    "10107": {
+        "class": "Priest",
+        "gender": "male",
+        "name": "Priest",
+        "race": "human"
+    },
+    "10108": {
+        "class": "Mystic",
+        "gender": "male",
+        "name": "Elementalist",
+        "race": "human"
+    },
+    "10111": {
+        "class": "Brawler",
+        "gender": "male",
+        "name": "Fighter",
+        "race": "human"
+    },
+    "10201": {
+        "class": "Warrior",
+        "gender": "female",
+        "name": "Warrior",
+        "race": "human"
+    },
+    "10202": {
+        "class": "Lancer",
+        "gender": "female",
+        "name": "Lancer",
+        "race": "human"
+    },
+    "10203": {
+        "class": "Slayer",
+        "gender": "female",
+        "name": "Slayer",
+        "race": "human"
+    },
+    "10204": {
+        "class": "Berserker",
+        "gender": "female",
+        "name": "Berserker",
+        "race": "human"
+    },
+    "10205": {
+        "class": "Sorcerer",
+        "gender": "female",
+        "name": "Sorcerer",
+        "race": "human"
+    },
+    "10206": {
+        "class": "Archer",
+        "gender": "female",
+        "name": "Archer",
+        "race": "human"
+    },
+    "10207": {
+        "class": "Priest",
+        "gender": "female",
+        "name": "Priest",
+        "race": "human"
+    },
+    "10208": {
+        "class": "Mystic",
+        "gender": "female",
+        "name": "Elementalist",
+        "race": "human"
+    },
+    "10211": {
+        "class": "Brawler",
+        "gender": "female",
+        "name": "Fighter",
+        "race": "human"
+    },
+    "10301": {
+        "class": "Warrior",
+        "gender": "male",
+        "name": "Warrior",
+        "race": "highelf"
+    },
+    "10302": {
+        "class": "Lancer",
+        "gender": "male",
+        "name": "Lancer",
+        "race": "highelf"
+    },
+    "10303": {
+        "class": "Slayer",
+        "gender": "male",
+        "name": "Slayer",
+        "race": "highelf"
+    },
+    "10304": {
+        "class": "Berserker",
+        "gender": "male",
+        "name": "Berserker",
+        "race": "highelf"
+    },
+    "10305": {
+        "class": "Sorcerer",
+        "gender": "male",
+        "name": "Sorcerer",
+        "race": "highelf"
+    },
+    "10306": {
+        "class": "Archer",
+        "gender": "male",
+        "name": "Archer",
+        "race": "highelf"
+    },
+    "10307": {
+        "class": "Priest",
+        "gender": "male",
+        "name": "Priest",
+        "race": "highelf"
+    },
+    "10308": {
+        "class": "Mystic",
+        "gender": "male",
+        "name": "Elementalist",
+        "race": "highelf"
+    },
+    "10401": {
+        "class": "Warrior",
+        "gender": "female",
+        "name": "Warrior",
+        "race": "highelf"
+    },
+    "10402": {
+        "class": "Lancer",
+        "gender": "female",
+        "name": "Lancer",
+        "race": "highelf"
+    },
+    "10403": {
+        "class": "Slayer",
+        "gender": "female",
+        "name": "Slayer",
+        "race": "highelf"
+    },
+    "10404": {
+        "class": "Berserker",
+        "gender": "female",
+        "name": "Berserker",
+        "race": "highelf"
+    },
+    "10405": {
+        "class": "Sorcerer",
+        "gender": "female",
+        "name": "Sorcerer",
+        "race": "highelf"
+    },
+    "10406": {
+        "class": "Archer",
+        "gender": "female",
+        "name": "Archer",
+        "race": "highelf"
+    },
+    "10407": {
+        "class": "Priest",
+        "gender": "female",
+        "name": "Priest",
+        "race": "highelf"
+    },
+    "10408": {
+        "class": "Mystic",
+        "gender": "female",
+        "name": "Elementalist",
+        "race": "highelf"
+    },
+    "10410": {
+        "class": "Gunner",
+        "gender": "female",
+        "name": "Engineer",
+        "race": "highelf"
+    },
+    "10501": {
+        "class": "Warrior",
+        "gender": "male",
+        "name": "Warrior",
+        "race": "aman"
+    },
+    "10502": {
+        "class": "Lancer",
+        "gender": "male",
+        "name": "Lancer",
+        "race": "aman"
+    },
+    "10503": {
+        "class": "Slayer",
+        "gender": "male",
+        "name": "Slayer",
+        "race": "aman"
+    },
+    "10504": {
+        "class": "Berserker",
+        "gender": "male",
+        "name": "Berserker",
+        "race": "aman"
+    },
+    "10505": {
+        "class": "Sorcerer",
+        "gender": "male",
+        "name": "Sorcerer",
+        "race": "aman"
+    },
+    "10506": {
+        "class": "Archer",
+        "gender": "male",
+        "name": "Archer",
+        "race": "aman"
+    },
+    "10507": {
+        "class": "Priest",
+        "gender": "male",
+        "name": "Priest",
+        "race": "aman"
+    },
+    "10508": {
+        "class": "Mystic",
+        "gender": "male",
+        "name": "Elementalist",
+        "race": "aman"
+    },
+    "10601": {
+        "class": "Warrior",
+        "gender": "female",
+        "name": "Warrior",
+        "race": "aman"
+    },
+    "10602": {
+        "class": "Lancer",
+        "gender": "female",
+        "name": "Lancer",
+        "race": "aman"
+    },
+    "10603": {
+        "class": "Slayer",
+        "gender": "female",
+        "name": "Slayer",
+        "race": "aman"
+    },
+    "10604": {
+        "class": "Berserker",
+        "gender": "female",
+        "name": "Berserker",
+        "race": "aman"
+    },
+    "10605": {
+        "class": "Sorcerer",
+        "gender": "female",
+        "name": "Sorcerer",
+        "race": "aman"
+    },
+    "10606": {
+        "class": "Archer",
+        "gender": "female",
+        "name": "Archer",
+        "race": "aman"
+    },
+    "10607": {
+        "class": "Priest",
+        "gender": "female",
+        "name": "Priest",
+        "race": "aman"
+    },
+    "10608": {
+        "class": "Mystic",
+        "gender": "female",
+        "name": "Elementalist",
+        "race": "aman"
+    },
+    "10701": {
+        "class": "Warrior",
+        "gender": "male",
+        "name": "Warrior",
+        "race": "castanic"
+    },
+    "10702": {
+        "class": "Lancer",
+        "gender": "male",
+        "name": "Lancer",
+        "race": "castanic"
+    },
+    "10703": {
+        "class": "Slayer",
+        "gender": "male",
+        "name": "Slayer",
+        "race": "castanic"
+    },
+    "10704": {
+        "class": "Berserker",
+        "gender": "male",
+        "name": "Berserker",
+        "race": "castanic"
+    },
+    "10705": {
+        "class": "Sorcerer",
+        "gender": "male",
+        "name": "Sorcerer",
+        "race": "castanic"
+    },
+    "10706": {
+        "class": "Archer",
+        "gender": "male",
+        "name": "Archer",
+        "race": "castanic"
+    },
+    "10707": {
+        "class": "Priest",
+        "gender": "male",
+        "name": "Priest",
+        "race": "castanic"
+    },
+    "10708": {
+        "class": "Mystic",
+        "gender": "male",
+        "name": "Elementalist",
+        "race": "castanic"
+    },
+    "10801": {
+        "class": "Warrior",
+        "gender": "female",
+        "name": "Warrior",
+        "race": "castanic"
+    },
+    "10802": {
+        "class": "Lancer",
+        "gender": "female",
+        "name": "Lancer",
+        "race": "castanic"
+    },
+    "10803": {
+        "class": "Slayer",
+        "gender": "female",
+        "name": "Slayer",
+        "race": "castanic"
+    },
+    "10804": {
+        "class": "Berserker",
+        "gender": "female",
+        "name": "Berserker",
+        "race": "castanic"
+    },
+    "10805": {
+        "class": "Sorcerer",
+        "gender": "female",
+        "name": "Sorcerer",
+        "race": "castanic"
+    },
+    "10806": {
+        "class": "Archer",
+        "gender": "female",
+        "name": "Archer",
+        "race": "castanic"
+    },
+    "10807": {
+        "class": "Priest",
+        "gender": "female",
+        "name": "Priest",
+        "race": "castanic"
+    },
+    "10808": {
+        "class": "Mystic",
+        "gender": "female",
+        "name": "Elementalist",
+        "race": "castanic"
+    },
+    "10810": {
+        "class": "Gunner",
+        "gender": "female",
+        "name": "Engineer",
+        "race": "castanic"
+    },
+    "10813": {
+        "class": "Valkyrie",
+        "gender": "female",
+        "name": "Glaiver",
+        "race": "castanic"
+    },
+    "10901": {
+        "class": "Warrior",
+        "gender": "male",
+        "name": "Warrior",
+        "race": "popori"
+    },
+    "10902": {
+        "class": "Lancer",
+        "gender": "male",
+        "name": "Lancer",
+        "race": "popori"
+    },
+    "10903": {
+        "class": "Slayer",
+        "gender": "male",
+        "name": "Slayer",
+        "race": "popori"
+    },
+    "10904": {
+        "class": "Berserker",
+        "gender": "male",
+        "name": "Berserker",
+        "race": "popori"
+    },
+    "10905": {
+        "class": "Sorcerer",
+        "gender": "male",
+        "name": "Sorcerer",
+        "race": "popori"
+    },
+    "10906": {
+        "class": "Archer",
+        "gender": "male",
+        "name": "Archer",
+        "race": "popori"
+    },
+    "10907": {
+        "class": "Priest",
+        "gender": "male",
+        "name": "Priest",
+        "race": "popori"
+    },
+    "10908": {
+        "class": "Mystic",
+        "gender": "male",
+        "name": "Elementalist",
+        "race": "popori"
+    },
+    "10911": {
+        "class": "Brawler",
+        "gender": "male",
+        "name": "Fighter",
+        "race": "popori"
+    },
+    "11001": {
+        "class": "Warrior",
+        "gender": "female",
+        "name": "Warrior",
+        "race": "elin"
+    },
+    "11002": {
+        "class": "Lancer",
+        "gender": "female",
+        "name": "Lancer",
+        "race": "elin"
+    },
+    "11003": {
+        "class": "Slayer",
+        "gender": "female",
+        "name": "Slayer",
+        "race": "elin"
+    },
+    "11004": {
+        "class": "Berserker",
+        "gender": "female",
+        "name": "Berserker",
+        "race": "elin"
+    },
+    "11005": {
+        "class": "Sorcerer",
+        "gender": "female",
+        "name": "Sorcerer",
+        "race": "elin"
+    },
+    "11006": {
+        "class": "Archer",
+        "gender": "female",
+        "name": "Archer",
+        "race": "elin"
+    },
+    "11007": {
+        "class": "Priest",
+        "gender": "female",
+        "name": "Priest",
+        "race": "elin"
+    },
+    "11008": {
+        "class": "Mystic",
+        "gender": "female",
+        "name": "Elementalist",
+        "race": "elin"
+    },
+    "11009": {
+        "class": "Reaper",
+        "gender": "female",
+        "name": "Soulless",
+        "race": "elin"
+    },
+    "11010": {
+        "class": "Gunner",
+        "gender": "female",
+        "name": "Engineer",
+        "race": "elin"
+    },
+    "11011": {
+        "class": "Brawler",
+        "gender": "female",
+        "name": "Fighter",
+        "race": "elin"
+    },
+    "11012": {
+        "class": "Ninja",
+        "gender": "female",
+        "name": "Assassin",
+        "race": "elin"
+    },
+    "11013": {
+        "class": "Valkyrie",
+        "gender": "female",
+        "name": "Glaiver",
+        "race": "elin"
+    },
+    "11101": {
+        "class": "Warrior",
+        "gender": "male",
+        "name": "Warrior",
+        "race": "baraka"
+    },
+    "11102": {
+        "class": "Lancer",
+        "gender": "male",
+        "name": "Lancer",
+        "race": "baraka"
+    },
+    "11103": {
+        "class": "Slayer",
+        "gender": "male",
+        "name": "Slayer",
+        "race": "baraka"
+    },
+    "11104": {
+        "class": "Berserker",
+        "gender": "male",
+        "name": "Berserker",
+        "race": "baraka"
+    },
+    "11105": {
+        "class": "Sorcerer",
+        "gender": "male",
+        "name": "Sorcerer",
+        "race": "baraka"
+    },
+    "11106": {
+        "class": "Archer",
+        "gender": "male",
+        "name": "Archer",
+        "race": "baraka"
+    },
+    "11107": {
+        "class": "Priest",
+        "gender": "male",
+        "name": "Priest",
+        "race": "baraka"
+    },
+    "11108": {
+        "class": "Mystic",
+        "gender": "male",
+        "name": "Elementalist",
+        "race": "baraka"
+    }
+}
