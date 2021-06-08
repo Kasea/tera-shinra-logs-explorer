@@ -3,7 +3,7 @@ import { withRouter, RouteComponentProps } from "react-router";
 import "./Run.css";
 
 import { ShinraExport } from "Interfaces";
-import { getRunData } from "../../Utils";
+import { getRunData, getSkillName, numberWithCommas, round } from "../../Utils";
 import Timeline from "Components/Timeline";
 import withLayout from "Components/withLayout";
 import { TimelineProps } from "Components/Timeline/Timeline";
@@ -38,6 +38,123 @@ const DisplayRunStats = (props: TimelineProps) => {
           </tr>
         ))}
       </table>
+    </div>
+  );
+};
+
+const DisplaySkillRotation = (props: TimelineProps) => {
+  const player = props.players[props.active];
+
+  let history: string[] = [];
+  const data = player.dealtSkillLog.filter(
+    (d) =>
+      d.type === 4 && props.startGraph <= d.time && d.time <= props.endGraph
+  );
+
+  for (const skill of data) {
+    history.push(getSkillName(player.templateId, skill.skillId));
+  }
+
+  return <div className="displaySkillCasts">{history.join(" -> ")}</div>;
+};
+
+const DisplaySkillBreakdown = (props: TimelineProps) => {
+  const player = props.players[props.active];
+
+  const data = player.dealtSkillLog.filter(
+    (d) =>
+      d.type === 1 && props.startGraph <= d.time && d.time <= props.endGraph
+  );
+  const skillData: {
+    [skillId: number]: {
+      skillId: number;
+      hits: number;
+      crit: number;
+      dmg: number;
+      critDmg: number;
+    };
+  } = {};
+
+  let sumDmg = 0;
+  for (const skill of data) {
+    const skillId = Math.floor(skill.skillId / 10000);
+    if (!skillData[skillId]) {
+      skillData[skillId] = {
+        skillId: skill.skillId,
+        hits: 0,
+        crit: 0,
+        dmg: 0,
+        critDmg: 0,
+      };
+    }
+
+    sumDmg += +skill.amount;
+    skillData[skillId].hits++;
+    skillData[skillId].crit += +skill.crit;
+    skillData[skillId].dmg += +skill.amount;
+    skillData[skillId].critDmg += skill.crit ? +skill.amount : 0;
+  }
+
+  const orderedSkillData = Object.entries(skillData).sort(
+    (a, b) => b[1].dmg - a[1].dmg
+  );
+
+  return (
+    <table className="breakdown-table">
+      <thead>
+        <tr>
+          <th>Skill</th>
+          <th>damage contribution</th>
+          <th>hits</th>
+          <th>hpm</th>
+          <th>crit rate</th>
+          <th>average hit damage</th>
+          <th>average crit</th>
+          <th>damage</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {orderedSkillData.map(([skillId, data]) => (
+          <tr key={skillId}>
+            <td>{getSkillName(player.templateId, data.skillId) || data.skillId}</td>
+            <td>{round(data.dmg / sumDmg * 100, 2)} %</td>
+            <td>{data.hits}</td>
+            <td>
+              {round(
+                data.hits / ((props.endGraph - props.startGraph) / 1000 / 60),
+                2
+              )}
+            </td>
+            <td>{round((data.crit / data.hits) * 100, 2)} %</td>
+            <td>{numberWithCommas(Math.floor(data.dmg / data.hits))}</td>
+            <td>{numberWithCommas(Math.floor(data.critDmg / data.crit))}</td>
+            <td>{numberWithCommas(Math.floor(data.dmg))}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+const DisplaySkillCasts = (props: TimelineProps) => {
+  const [showRotation, setShowRotation] = React.useState(false);
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setShowRotation((prev) => !prev);
+        }}
+      >
+        show {showRotation ? "breakdown" : "rotoation"}
+      </button>
+
+      {showRotation ? (
+        <DisplaySkillRotation {...props} />
+      ) : (
+        <DisplaySkillBreakdown {...props} />
+      )}
     </div>
   );
 };
@@ -78,6 +195,13 @@ const DisplayRunData = (props: ShinraExport) => {
       {selected !== -1 && (
         <>
           <DisplayRunStats
+            {...props}
+            active={selected}
+            startGraph={start * 1000}
+            endGraph={end * 1000}
+          />
+
+          <DisplaySkillCasts
             {...props}
             active={selected}
             startGraph={start * 1000}

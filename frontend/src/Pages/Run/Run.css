@@ -13,3 +13,15 @@
 .inputContainer > input {
   margin: 0 4px;
 }
+
+.displaySkillCasts {
+  width: 95%;
+}
+
+.breakdown-table {
+  width: 70%;
+}
+
+td {
+  text-align: center;
+}

@@ -19,7 +19,19 @@ export const getSkillName = (templateId: number, skillId: number): string => {
   const { skill, sub } = getSkillData(skillId);
 
   // @ts-ignore
-  return SkillPreset?.[klass]?.[skill]?.[sub]?.name || "";
+  const name = SkillPreset?.[klass]?.[skill]?.[sub]?.name || "";
+
+  // @ts-ignore
+  if(!name && SkillPreset?.[klass]?.[skill]) {
+    // @ts-ignore
+    for(const sub in SkillPreset[klass][skill]) {
+      // @ts-ignore
+      const name = SkillPreset[klass][skill][sub].name;
+      if(name) return name;
+    }
+  }
+
+  return name;
 };
 
 export const getAbnormalityData = (
@@ -33,3 +45,12 @@ export const getAbnormalityName = (abnormality: number): string | null => {
   // @ts-ignore
   return Abnormalities?.[abnormality]?.name || null;
 };
+
+export const round = (number: number, digits=2) => {
+  const pow = Math.pow(10, digits);
+  return Math.floor(number * pow) / pow;
+}
+
+export function numberWithCommas(x: number) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

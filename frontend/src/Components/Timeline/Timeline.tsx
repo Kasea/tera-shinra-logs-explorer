@@ -78,6 +78,7 @@ const generateAbnormalities = (
 };
 
 const Timeline = (props: TimelineProps) => {
+  const [showBuffs, setShowBuffs] = React.useState(false);
   const player = props.players[props.active];
 
   const skillCasts = generateSkillCasts(
@@ -91,8 +92,11 @@ const Timeline = (props: TimelineProps) => {
     props.endGraph
   );
 
+  const series: any[] = [skillCasts];
+  if (showBuffs) series.push(abnormalities);
+
   const state = {
-    series: [skillCasts, abnormalities],
+    series: series,
     options: {
       plotOptions: {
         chart: {
@@ -108,7 +112,6 @@ const Timeline = (props: TimelineProps) => {
         x: {
           show: true,
           formatter: (val: any, obj: any) => {
-            console.log(val, obj);
             if (!obj) return val;
           },
         },
@@ -131,12 +134,24 @@ const Timeline = (props: TimelineProps) => {
   };
 
   return (
-    <ReactApexChart
-      options={state.options}
-      series={state.series}
-      type="rangeBar"
-      height={600}
-    />
+    <div>
+      <div>
+        <button
+          onClick={() => {
+            setShowBuffs((prev) => !prev);
+          }}
+        >
+          {showBuffs ? "hide" : "show"} buffs
+        </button>
+      </div>
+
+      <ReactApexChart
+        options={state.options}
+        series={state.series}
+        type="rangeBar"
+        height={600}
+      />
+    </div>
   );
 };
 
